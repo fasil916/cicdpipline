@@ -12,7 +12,9 @@ pipeline {
        AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
     }
 
-  
+    stages {
+       
+
         stage('Terraform Init') {
             steps {
                 echo "----------terraform init------------"
@@ -43,14 +45,7 @@ pipeline {
                 }
             }
         }
-        stage('Terraform destroy') {
-            steps {
-                echo "----------terraform destroy------------"
-                script {
-                    sh 'terraform destroy -auto-approve'
-                }
-            }
-        }
+        
         
     }
 }
