@@ -19,9 +19,9 @@ pipeline {
             steps {
                 echo "----------terraform init------------"
                 script {
-                    '''sh "pwd"
+                    sh 'pwd'
                     sh 'terraform init'
-                    '''
+                    
                 }
             }
         }
