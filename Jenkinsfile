@@ -1,7 +1,7 @@
 pipeline {
     agent {
         dockerfile {
-            args '--user roor --privileged'
+            args '--user root --privileged'
                    reuseNode true
 }
 
