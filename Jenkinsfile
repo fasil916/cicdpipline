@@ -21,6 +21,7 @@ pipeline {
         stage('Git Clone') {
             steps {
                 echo "-------------Git Clone-----------"
+                sh "pwd"
                 git branch: 'main', url: 'https://github.com/fasil916/cicdpipline.git'
             }
         }
@@ -29,6 +30,7 @@ pipeline {
             steps {
                 echo "----------terraform init------------"
                 script {
+                    sh "pwd"
                     sh 'terraform init'
                 }
             }
