@@ -25,8 +25,9 @@ pipeline {
             steps {
                 echo "----------terraform init------------"
                 script {
-                    sh "pwd"
+                    '''sh "pwd"
                     sh 'terraform init'
+                    '''
                 }
             }
         }
@@ -50,7 +51,14 @@ pipeline {
                 }
             }
         }
-        
+        stage('Terraform destroy') {
+            steps {
+                echo "----------terraform destroy------------"
+                script {
+                    sh 'terraform destroy -auto-approve'
+                }
+            }
+        }
         
     }
 }
