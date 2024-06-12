@@ -37,7 +37,7 @@ pipeline {
             }
         }
         
-        stage('Terraform apply') {
+        stage('Terraform destroy') {
             steps {
                 echo "----------terraform apply------------"
                 script {
