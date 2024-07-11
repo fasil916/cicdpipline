@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: muhammadfasil/kubentes-pipeline:5
+  repository: muhammadfasil/hello-world:latest
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
